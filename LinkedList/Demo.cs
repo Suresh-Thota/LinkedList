@@ -53,6 +53,19 @@ namespace LinkedList
             Console.WriteLine(" enter a new node to insert at " + d);
             data2 = Convert.ToInt32(Console.ReadLine());
             list.InsertAtPosition(data2, d);
+            //---------------------------------------------------------------------
+            list.DeleteFirstNode();
+            //----------------------------------------------------------------
+            list.DeleteLastode();
+            //---------------------------------------------------------------------
+            int e;
+            Console.WriteLine("enter a node that you want to delete");
+            e = Convert.ToInt32(Console.ReadLine());
+            list.deleteNode(e);
+            //--------------------------------------------------------------------
+            list.ReverseList();
+            //-------------------------------------------------------------------
+            list.BubbleSort();
         }
     }
 }

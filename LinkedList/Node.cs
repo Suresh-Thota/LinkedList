@@ -13,5 +13,6 @@ namespace LinkedList
             info = i;
             link = null;
         }
+        //------------------------------------------------
     }
 }

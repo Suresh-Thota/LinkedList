@@ -32,6 +32,7 @@ namespace LinkedList
             a = Convert.ToInt32(Console.ReadLine());
             list.InsertAtBeginningToList(a);
             //------------------------------------------------------------------
+            //------------------------------
             int data, b;
             Console.WriteLine("select a node");
             b = Convert.ToInt32(Console.ReadLine());

@@ -291,6 +291,24 @@ namespace LinkedList
             }
             start = prev;
         }
+        public void BubbleSort()
+        {
+            Node p, q, end;
+            for (end = null; end !=  start.link;end = p)
+            {
+                for(p = start;p.link!=end;p = p.link)
+                {
+                    q = p.link;
+                    if (p.info > q.info)
+                    {
+                        int temp = p.info;
+                        p.info = q.info;
+                        q.info = temp;
+                    }
+                }
+            }
+             
+        }
         
     }
 }

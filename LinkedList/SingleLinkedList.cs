@@ -161,5 +161,136 @@ namespace LinkedList
                 p.link = temp;
             }
         }
+        public void InsertBefore(int data,int x)
+        {
+            Node temp;
+            if(start == null)
+            {
+                Console.WriteLine("list is empty");
+                return;
+            }
+            // if x is in first node new node will be inserted  before first node 
+            if(start.info == x)
+            {
+                temp = new Node(data);
+                temp.link = start;
+                start = temp;
+                return;
+            }
+            Node p = start;
+            while(p.link != null)
+            {
+                if(p.link.info == x)
+                {
+                    break;
+                }
+                p = p.link;
+            }
+            if(p.link == null)
+            {
+                Console.WriteLine(x + " is not present in list");
+            }
+            else
+            {
+                temp = new Node(data);
+                temp.link = p.link;
+                p.link = temp;
+            }
+        }
+        public void InsertAtPosition(int data , int x)
+        {
+            Node temp;
+            Node p = start;
+            if(x == 1)
+            {
+                temp = new Node(data);
+                temp.link = start.link;
+                start.link = temp;
+                return;
+            }
+            for(int i = 1; i < x-1 && p != null; i++)
+            {
+                p = p.link; 
+            }
+            if(p == null)
+            {
+                Console.WriteLine(x + " is not present in the list");
+            }
+            else
+            {
+                temp = new Node(data);
+                temp.link = p.link;
+                p.link = temp;
+            }
+        }
+        public void DeleteFirstNode()
+        {
+            if (start == null)
+                return;
+            start = start.link;
+        }
+        public void DeleteLastode()
+        {
+            if (start == null)
+                return;
+            if(start.link == null)
+            {
+                start = null;
+                return;
+            }
+            Node p = start;
+            while (p.link.link != null)
+                p = p.link;
+            p.link = null;
+
+        }
+        public void deleteNode(int x)
+        {
+            if(start == null)
+            {
+                Console.WriteLine(" list is empty");
+                return;
+            }
+            if(start.info == x)
+            {
+                start = start.link;
+                return;
+            }
+            Node p = start;
+             while(p.link != null)
+            {
+                if(p.link.info == x)
+                {
+                    break;
+                }
+                p = p.link;
+            }
+             if(p == null)
+            {
+                Console.WriteLine(" given element " + x + " is not present in list ");
+            }
+            else
+            {
+                p.link = p.link.link;
+            }
+            {
+
+            }
+        }
+        public void ReverseList()
+        {
+            Node prev, p, next;
+            prev = null;
+            p = start;
+            while (p != null)
+            {
+                next = p.link;
+                p.link = prev;
+                prev = p;
+                p = next;
+            }
+            start = prev;
+        }
+        
     }
 }

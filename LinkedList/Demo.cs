@@ -38,6 +38,21 @@ namespace LinkedList
             Console.WriteLine("enter a new node to insert after " + b + " ");
             data = Convert.ToInt32(Console.ReadLine());
             list.InsertAfter(data, b);
+            //-------------------------------------------------------------------
+            int data1, c;
+            Console.WriteLine("select a node");
+            c = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter a new node to insert before " + c + " ");
+            data1 = Convert.ToInt32(Console.ReadLine());
+            list.InsertBefore(data1, c);
+
+            //----------------------------------------------------------------------
+            int data2, d;
+            Console.WriteLine("enter the location");
+            d = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(" enter a new node to insert at " + d);
+            data2 = Convert.ToInt32(Console.ReadLine());
+            list.InsertAtPosition(data2, d);
         }
     }
 }
